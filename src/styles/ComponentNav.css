@@ -1,0 +1,78 @@
+.component-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #00000081;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons,
+.icon-container {
+  display: flex;
+  align-items: center;
+  width: 20%;
+
+}
+
+.nav-button,
+.icon-button {
+  background-color:var(--bg-color-dark) ;
+  color: var(--text-color-dark);
+  border: none;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+
+}
+
+.nav-button:hover,
+.icon-button:hover {
+  background-color: #0056b3;
+}
+
+.page-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.indicator-label {
+  font-size: 12px;
+}
+
+.indicator-number {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.icon-button p {
+  margin: 0;
+  margin-left: 4px;
+}
+
+
+
+.copied-popup {
+  position: absolute;
+  bottom: -50px; 
+  left: 50%;
+
+  transform: translateX(-50%);
+  background-color: #4caf50; 
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.component-nav.copying .copied-popup {
+  opacity: 1;
+}

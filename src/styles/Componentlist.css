@@ -1,0 +1,154 @@
+.navbar-container {
+  width: max-content;
+  height: 100%;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: scroll;
+}
+
+.navbar-container h1 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  width: max-content;
+}
+
+.nav-controller {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pinned-list {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: start;
+}
+
+.pinned-list div {
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.nav-list {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: larger;
+  gap: 0.3rem;
+
+  overflow-y: scroll;
+}
+
+.nav-list div {
+  width: 100%;
+  padding:10px 20px 10px 20px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.pinned-list div:hover,
+.nav-list div:hover,
+.footer-navbar div:hover {
+  background-color: rgba(240, 248, 255, 0.161);
+  transition: background-color 0.3s ease;
+}
+
+.nav-list div a {
+  background-color: transparent;
+  font-size: large;
+}
+
+
+.search-nav {
+  color: rgba(240, 248, 255, 0.685);
+  font-weight: 100;
+}
+
+.footer-navbar {
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.1px solid rgba(240, 248, 255, 0.161);
+  padding-top: 1rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.custombackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.viewSidebar {
+  transform: rotate(180deg);
+}
+
+.nav-controller span,
+.navbar-container span {
+  flex: 1;
+}
+
+
+
+.resizable-btn{
+  display: block;
+}
+@media screen and (max-width: 64rem) {
+  .resizable-btn{
+    display: none;
+  }
+  .navbar-container h1 {
+    display: none;
+  }
+  .pinned-list {
+    flex-direction: column;
+  }
+
+  .nav-list div {
+    width: max-content;
+    padding:10px 20px 10px 20px;
+    background-color: rgba(240, 248, 255, 0.322);
+  }
+  .nav-list {
+    gap: 2rem;
+  }
+  .nav-list div a {
+    display: none;
+  }
+
+  .nav-arrow-icon {
+    display: none;
+  }
+  .nav-controller span {
+    display: none;
+  }
+
+  .horizondelline {
+    display: none;
+  }
+  .footer-navbar {
+    border: none;
+  }
+  .custombackground {
+    padding: 8px;
+    border-radius: 1rem;
+    background-color: rgba(240, 248, 255, 0.322);
+
+  }
+}

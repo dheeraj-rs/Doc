@@ -1,0 +1,29 @@
+@font-face {
+  font-family: AverageSans;
+  src: url(./assets/AverageSans-Regular.ttf);
+}
+
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --bg-color-dark: rgba(3, 69, 20, 0.851);
+  --text-color-dark: rgba(255, 255, 255, 0.756);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+::selection {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: AverageSans;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
