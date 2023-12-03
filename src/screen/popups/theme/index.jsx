@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChromePicker } from "react-color";
-import "./Theme.css";
+import "./style/theme.css";
 
 function Theme() {
   const [selectedColor, setSelectedColor] = useState("#012c14");

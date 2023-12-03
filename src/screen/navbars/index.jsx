@@ -2,10 +2,9 @@ import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar1 from "../../components/navbar/navbar1";
 import Navbar2 from "../../components/navbar/navbar2";
-import { setTotalPage } from "../../redux/features";
+import { setTotalPage } from "../../redux/features/ScreenSlice";
 
 const NavbarScreens = () => {
-  console.log("🚀  Render : NavbarScreens");
   const dispatch = useDispatch();
   const activescreen = useSelector((state) => state.screen.activescreen);
 

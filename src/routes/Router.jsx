@@ -5,7 +5,7 @@ import ComponentViewer from "../screen/home";
 function Router() {
   return (
     <Routes>
-      <Route path="/*" element={<ComponentViewer/>} />
+      <Route path="/*" element={<ComponentViewer />} />
     </Routes>
   );
 }

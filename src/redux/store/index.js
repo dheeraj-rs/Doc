@@ -1,9 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import activeScreenReducer from "../features";
-
+import screenReducer from "../features/ScreenSlice";
 export const store = configureStore({
   reducer: {
-    screen: activeScreenReducer,
-    
+    screen: screenReducer,
   },
 });

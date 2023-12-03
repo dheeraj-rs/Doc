@@ -1,19 +1,34 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Resizable } from "react-resizable";
 import { Laptop, MobileScreenShare } from "@mui/icons-material";
-import "../../styles/Componentviewer.css";
-import ComponentLists from "./Uicomponents";
-import ComponentNav from "./ComponentNav";
+import ComponentLists from "./components/Uicomponents";
+import ComponentNav from "./components/ComponentNav";
 import SelectComponent from "../../routes/SelectComponent";
+import "./style/Componentviewer.css";
 
 const ComponentViewer = () => {
-  console.log("🚀  Render : ComponentViewer");
-
-  const [isNavbarAuto, setNavbarAuto] = useState(false);
+  const [isNavbarAuto, setNavbarAuto] = useState(true);
+  const [isUilistAuto, setUilistAuto] = useState(false);
   const [isResizable, setResizable] = useState(false);
   const [width, setWidth] = useState(1024);
   const [height, setHeight] = useState(100);
 
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     console.log("Mouse moved:", event.clientX, event.clientY);
+  //     setUilistAuto(!isUilistAuto);
+  //   };
+
+  //   window.addEventListener("mousemove", handleMouseMove);
+
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
+
+  const toggleUilist = () => {
+    setUilistAuto(!isUilistAuto);
+  };
   const toggleNavbar = () => {
     setNavbarAuto(!isNavbarAuto);
   };
@@ -51,17 +66,22 @@ const ComponentViewer = () => {
 
   return (
     <div className="component-viewer-container">
-      <div className={` ${isNavbarAuto ? "auto-list" : "manual-list"}`}>
-        <ComponentLists
-          toggleNavbar={toggleNavbar}
-          toggleResizable={toggleResizable}
-        />
-      </div>
-
-      <div className={`${isNavbarAuto ? "auto-screens" : "manual-screens"}`}>
-        <div className="selectcomponent-nav">
-          <ComponentNav />
+      {/* {isUilistAuto && ( */}
+        <div className={` ${isUilistAuto ? "" : "manual-list"}`}>
+          <ComponentLists
+            toggleNavbar={toggleNavbar}
+            toggleUilist={toggleUilist}
+            toggleResizable={toggleResizable}
+          />
         </div>
+      {/* )} */}
+
+      <div className={`${isUilistAuto ? "auto-screens" : "manual-screens"}`}>
+        {isNavbarAuto && (
+          <div className={`selectcomponent-nav`}>
+            <ComponentNav />
+          </div>
+        )}
         <div className="selectcomponent-screen">
           {isResizable ? (
             <div className="resizable-container">
@@ -90,7 +110,9 @@ const ComponentViewer = () => {
               </Resizable>
               <div className="footer-resize-value">
                 <MobileScreenShare onClick={() => handleScreenWidth(320)} />
-                <h1 className="screen-width-view">{`Width: ${width}px`}</h1>
+                <h1 className="screen-width-view">{`Width: ${Math.floor(
+                  width
+                )}px`}</h1>
                 <Laptop onClick={() => handleScreenWidth(1440)} />
               </div>
             </div>

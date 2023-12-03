@@ -1,0 +1,21 @@
+.chatpopup {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 8%;
+  z-index: 50;
+  }
+  .react-chatbot-kit-chat-header {
+    background-color: var(--bg-color-scondory) !important ;
+    color: var(--text-color-dark);
+  }
+  
+  .react-chatbot-kit-chat-input {
+    outline: none;
+    color: black;
+  }
+  
+  .react-chatbot-kit-chat-btn-send {
+    background-color: #000000 !important;
+  }

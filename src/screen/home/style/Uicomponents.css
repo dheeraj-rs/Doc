@@ -6,12 +6,15 @@
   flex-direction: column;
   gap: 2rem;
   overflow-y: scroll;
+  
 }
 
 .navbar-container h1 {
   font-size: 1.6rem;
   line-height: 2rem;
   width: max-content;
+  cursor: default;
+
 }
 
 .nav-controller {
@@ -30,7 +33,7 @@
   width: 100%;
   display: flex;
   gap: 2rem;
-  align-items: start;
+  align-items: flex-start; /* Change 'start' to 'flex-start' */
 }
 
 .pinned-list div {
@@ -45,20 +48,22 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start; /* Change 'start' to 'flex-start' */
   font-size: larger;
   gap: 0.3rem;
-
   overflow-y: scroll;
+  
 }
 
 .nav-list div {
   width: 100%;
-  padding:10px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
   display: flex;
   gap: 1rem;
   align-items: center;
   border-radius: 1rem;
+  cursor: pointer;
+
 }
 
 .pinned-list div:hover,
@@ -72,7 +77,6 @@
   background-color: transparent;
   font-size: large;
 }
-
 
 .search-nav {
   color: rgba(240, 248, 255, 0.685);
@@ -91,7 +95,7 @@
 .custombackground {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 6px;
 }
 
@@ -99,18 +103,31 @@
   transform: rotate(180deg);
 }
 
+.nav-controller > * {
+  cursor: pointer; 
+}
+
 .nav-controller span,
 .navbar-container span {
   flex: 1;
+  cursor: pointer;
 }
 
-
-
-.resizable-btn{
+.resizable-btn {
   display: block;
 }
+
+.nav-list div.selected-item {
+  background-color: var(--bg-color-scondory) !important ;
+}
+
+.footer-navbar div {
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
 @media screen and (max-width: 64rem) {
-  .resizable-btn{
+  .resizable-btn {
     display: none;
   }
   .navbar-container h1 {
@@ -122,7 +139,7 @@
 
   .nav-list div {
     width: max-content;
-    padding:10px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     background-color: rgba(240, 248, 255, 0.322);
   }
   .nav-list {
@@ -149,6 +166,9 @@
     padding: 8px;
     border-radius: 1rem;
     background-color: rgba(240, 248, 255, 0.322);
+  }
 
+  .nav-list div .selected-item {
+    background-color: var(--bg-color-scondory) !important ;
   }
 }

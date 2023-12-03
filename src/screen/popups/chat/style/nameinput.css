@@ -1,0 +1,86 @@
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 190px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 90%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #fff;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
+}
+
+.form-control label span:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.form-control label span:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+.form-control label span:nth-child(3) {
+  transition-delay: 100ms;
+}
+
+.form-control label span:nth-child(4) {
+  transition-delay: 150ms;
+}
+
+.form-control label span:nth-child(5) {
+  transition-delay: 200ms;
+}
+
+.form-control label span:nth-child(6) {
+  transition-delay: 250ms;
+}
+
+.form-control label span:nth-child(7) {
+  transition-delay: 300ms;
+}
+
+.form-control label span:nth-child(8) {
+  transition-delay: 350ms;
+}
+.form-control label span:nth-child(9) {
+  transition-delay: 400ms;
+}
+.form-control label span:nth-child(10) {
+  transition-delay: 450ms;
+}
+.form-control label span:nth-child(11) {
+  transition-delay: 500ms;
+}
+.form-control label span:nth-child(12) {
+  transition-delay: 550ms;
+}

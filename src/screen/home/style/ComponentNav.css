@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #00000081;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var( --bg-color-dark);
 }
 
 .nav-buttons,
@@ -17,7 +17,7 @@
 
 .nav-button,
 .icon-button {
-  background-color:var(--bg-color-dark) ;
+  background-color:var(--bg-color-scondory) ;
   color: var(--text-color-dark);
   border: none;
   padding: 8px 12px;
@@ -61,7 +61,7 @@
 
 .copied-popup {
   position: absolute;
-  bottom: -50px; 
+  left: -50px; 
   left: 50%;
 
   transform: translateX(-50%);

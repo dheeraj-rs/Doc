@@ -1,0 +1,21 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  
+  .h-96 {
+    height: 24rem;
+  }
+  
